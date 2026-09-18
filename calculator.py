@@ -4,4 +4,7 @@ def add(a, b):
 def sub(a, b):
     return a-b
 
-print(add(11,4))
+def div(a, b):
+    return a/b
+
+print(div(11,4))

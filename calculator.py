@@ -1,8 +1,6 @@
 def mul(a, b):
     return a*b
 
-print(mul(3,5))
-
 def add(a, b):
     return a+b
 
@@ -15,4 +13,4 @@ def div(a, b):
 def mod(a, b):
     return a%b
 
-print(div(11,4))
+print(mod(11,4))

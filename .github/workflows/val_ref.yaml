@@ -4,7 +4,7 @@ jobs:
   print:
     runs-on: ubuntu-latest
     env:
-      USERNAME: ${{ vars.ANYTHING }}
+      SUPERSTRONGVAL: ${{ vars.ANYTHING }}
     steps:
-      - run: echo "$USERNAME"
+      - run: echo "$SUPERSTRONGVAL"
       - run: echo "${{vars.ANYTHING}}"

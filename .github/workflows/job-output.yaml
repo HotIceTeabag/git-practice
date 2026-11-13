@@ -35,5 +35,6 @@ jobs:
       - name: Read Job Output
         run: |
           echo "GITHUB_OUTPUT = $RESULT"
+          echo "GITHUB_OUTPUT = $MESSAGE"
           echo "GITHUB_ENV = ${MESSAGE:-Not Available}"
 

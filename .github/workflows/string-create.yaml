@@ -9,8 +9,8 @@ jobs:
           # format() 함수
           RESULT_FORMAT_1: ${{ format('Hello {0}', 'GitHub') }}
           RESULT_FORMAT_2: ${{ format('{0} {1}', 'Hello', 'World') }}
-          RESULT_FORMAT_3: "${{ format('Name: {0}, Age: {1}', 'Kim', 20) }}" #20이 문자열로 취급되기 위해 큰따옴표 이용
-
+          RESULT_FORMAT_3: "${{ format('Name: {0}, Age: {1}', 'Kim', 20) }}" 
+          
           # join() 함수
           RESULT_JOIN_1: ${{ join(fromJSON('["Apple","Banana","Cherry"]'), ', ') }}
           RESULT_JOIN_2: ${{ join(fromJSON('["A","B","C"]'), '-') }}

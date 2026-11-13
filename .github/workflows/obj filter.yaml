@@ -1,0 +1,28 @@
+name: Object Filter Exmaple
+on: workflow_dispatch
+env:
+  FRUITS: '{"fruits":[{"name":"Apple","price":1000}, {"name":"Banana","price":2000}, {"name":"Cherry","price":3000}]}'
+jobs:
+  object-filter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Object Folter Test
+        env:
+          FITST: ${{fromJSON(env.FRUITS).fruits[0].name}}
+          SECONF: 
+        run: |
+          echo "AND: ${{true && false}}"
+          echo "OR: ${{true || false}}"
+          echo "NOT: ${{!true}}"
+
+      - name: Comparison Operators
+        run: |
+          echo "Equal: ${{10 == 10}}"
+          echo "Not Equal: ${{10!=20}}"
+          echo "Greater: ${{10>5}}"
+          echo "Less: ${{10<5}}"
+          echo "Greater Equal: ${{10>=5}}"
+          echo "Less Equal: ${{10<=20}}"
+          echo "Type Error: ${{false == 1}}"
+
+          

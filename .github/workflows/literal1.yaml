@@ -4,7 +4,7 @@ jobs:
   literal:
     runs-on: ubuntu-latest
     steps:
-      - name: Liteal Test
+      - name: Literal Test
         run: |
           echo "Boolean: ${{true}}"
           echo "Integer: ${{100}}"

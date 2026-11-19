@@ -4,7 +4,7 @@ on:
 permissions:
   issues: write
 jobs:
-  comment:
+  MKIssue:
     runs-on: ubuntu-latest
 
     env:

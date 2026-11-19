@@ -1,0 +1,21 @@
+name: Issue Comment Example
+on:
+  push
+permissions:
+  issues: write
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      # 1. GitHub CLI 사용
+      - name: IssueMake
+        run: |
+          gh api \
+            --method POST \
+            "repos/$GITHUB_REPOSITORY/issues" \
+            -f title="Issue For New PUSH" \
+            -f body="This push is so perfect that there's nothing to discuss."

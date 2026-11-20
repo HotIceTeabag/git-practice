@@ -8,7 +8,7 @@ def subtotal(unit_price: int, quantity: int) -> int:
 
 def final_total(price: int, qty: int, discount: int) -> int:
     if not 0 <= discount <= 100:
-        raise ValueError("Invalid discount")
+        raise ValueError("invalid discount")
     amount = subtotal(price, qty)
     amount -= amount * discount // 100
     shipping = 3_000 if 0 < amount < 50_000 else 0

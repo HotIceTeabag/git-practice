@@ -1,0 +1,21 @@
+name: Python CI LV 2
+on: workflow_dispatch
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+
+      - name: Setting Env
+        run: |
+          python -m pip install -r requirements-dev.txt
+      
+      - name: Test
+        run: python -m pytest -v tests/test_pricing.py

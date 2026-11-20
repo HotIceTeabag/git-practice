@@ -18,7 +18,8 @@ def test_subtotal_zero():
 def test_subtotal_negative():
     with pytest.raises(ValueError):
         subtotal(-100, 2)
-        
+
+
 def test_subtotal_outlier():
     with pytest.raises(ValueError):
-        subtotal(8000, 10_0000)
+        subtotal(8000, 99999)

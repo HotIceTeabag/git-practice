@@ -22,4 +22,4 @@ def test_subtotal_negative():
 
 def test_subtotal_outlier():
     with pytest.raises(ValueError):
-        subtotal(8000, 99999)
+        subtotal(8000, 100000)

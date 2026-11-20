@@ -1,7 +1,7 @@
 def subtotal(unit_price: int, quantity: int) -> int:
     if unit_price < 0 or quantity < 0:
         raise ValueError("negative input")
-    if unit_price > 50_000 or quantity >= 10_0000:
+    if unit_price > 100_000 or quantity >= 1_0000:
         raise ValueError("outlier value")
     return unit_price * quantity
 

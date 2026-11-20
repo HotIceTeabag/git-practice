@@ -26,7 +26,7 @@ def test_subtotal_outlier():
 
 
 def test_discount_over_100():
-    with pytest.raises(ValueError, match="invaild discount"):
+    with pytest.raises(ValueError, match="invalid discount"):
         final_total(10000, 20, 101)
 
 
